@@ -140,11 +140,10 @@ class MainActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
             override fun onTextChanged(search: CharSequence?, start: Int, before: Int, count: Int) {
-                // hago una consulta a la API con lo que se busca -> Trae mas cantidad de recetas
-                val gatos = buscarEjerciciosPorNombre(kitties,search);
-                updateRecipesQuery(gatos)
+                val gatos = buscarGatosPorNombre(kitties,search);
+                updateKittiesQuery(gatos)
             }
-            private fun buscarEjerciciosPorNombre( gatitos: ArrayList<Cat>, search: CharSequence?): ArrayList<Cat> {
+            private fun buscarGatosPorNombre( gatitos: ArrayList<Cat>, search: CharSequence?): ArrayList<Cat> {
                 val gatitosEncontrados = ArrayList<Cat>();
                 for(gatito in gatitos){
                     if  (gatito.name?.uppercase()?.contains(search.toString().uppercase()) == true) {
@@ -153,7 +152,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 return gatitosEncontrados
             }
-            private fun updateRecipesQuery(gatitos: ArrayList<Cat>) {
+            private fun updateKittiesQuery(gatitos: ArrayList<Cat>) {
                 scope.launch {
                     withContext(Dispatchers.Main) {
                         adapter.Update(gatitos)

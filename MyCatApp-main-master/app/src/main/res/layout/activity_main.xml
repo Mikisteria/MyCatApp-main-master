@@ -17,8 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvKitties"
@@ -37,59 +36,47 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
 
+        android:layout_alignEnd="@+id/btnFavPan"
+        android:layout_marginEnd="-250dp"
+        android:background="#FCD6F9"
+        android:radius="3dp"
+        android:text="LOG OUT"
+        android:textColor="#424242"
+        android:textSize="16sp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputFiltro"
-            android:layout_width="365dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="6dp"
-            android:background="#B3EAE7D9"
-            android:hint="Filtrar por Raza"
-            android:padding="20px"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputFiltro"
+        android:layout_width="365dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnLogOut"
+        android:layout_marginTop="24dp"
+        android:background="#B3EAE7D9"
+        android:hint="Filtrar por Raza"
+        android:padding="20px" />
 
-        <Button
-            android:id="@+id/btnFavPan"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+    <Button
+        android:id="@+id/btnFavPan"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
 
-            android:layout_marginStart="256dp"
+        android:background="#FCD6F9"
+        android:radius="3dp"
+        android:text="Favoritos"
+        android:textColor="#424242"
+        android:textSize="16sp" />
 
-            android:layout_marginBottom="-46dp"
-            android:background="#FCD6F9"
-            android:radius="3dp"
-            android:text="Favoritos"
-            android:textColor="#424242"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/btnLogOut"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
-
-            android:background="#FCD6F9"
-            android:radius="3dp"
-            android:text="LOG OUT"
-            android:textColor="#424242"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="108dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Kitties"
-            android:textSize="34sp" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnFavPan"
+        android:layout_marginEnd="-131dp"
+        android:text="Kitties"
+        android:textSize="34sp" />
 
 </RelativeLayout>

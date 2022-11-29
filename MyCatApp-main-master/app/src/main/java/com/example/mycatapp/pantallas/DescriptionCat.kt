@@ -36,14 +36,16 @@ class DescriptionCat : AppCompatActivity(){
         {
             Log.d("que", "onda")
             val imageView : ImageView = findViewById(R.id.imageCat)
-            val textView : TextView = findViewById(R.id.lblOrigin)
-            val textView2 : TextView = findViewById(R.id.lblDescription)
-            val textView3 : TextView = findViewById(R.id.lblTemperament)
+            val origin : TextView = findViewById(R.id.lblOrigin)
+            val description : TextView = findViewById(R.id.lblDescription)
+            val temperament : TextView = findViewById(R.id.lblTemperament)
+            val name : TextView = findViewById(R.id.lblName)
             Log.d("que", "ondax2")
             Log.d("que", cat.image!!.url!!)
-            textView.text =cat.origin
-            textView2.text = cat.description
-            textView3.text = cat.temperament
+            origin.text =cat.origin
+            description.text = cat.description
+            temperament.text = cat.temperament
+            name.text = cat.name
             var url = intent.extras?.getString("Imagen")
             Glide.with(this)
                 .load(cat.image!!.url!!)
