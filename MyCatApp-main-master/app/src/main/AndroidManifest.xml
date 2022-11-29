@@ -15,14 +15,14 @@
         android:theme="@style/Theme.MyCatApp"
         tools:targetApi="31">
         <activity
-            android:name=".ProfileActivity"
+            android:name=".pantallas.ProfileActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".pantallas.MainActivity"
             android:exported="false">
 
 
@@ -31,8 +31,17 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".DescriptionCat"
-            android:exported="true">
+            android:name=".pantallas.ListaFavoritos"
+            android:exported="false">
+
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".pantallas.DescriptionCat"
+            android:exported="false">
 
 
             <meta-data
@@ -42,7 +51,7 @@
 
 
         <activity
-            android:name=".Login"
+            android:name=".pantallas.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -23,6 +23,7 @@ class CustomProgressDialog(context: Context) {
     private var progressBar: ProgressBar
 
     fun start(title: String = "") {
+
         cpTitle.text = title
         dialog.show()
     }
@@ -74,4 +75,6 @@ class CustomProgressDialog(context: Context) {
             }
         }
     }
+
+
 }

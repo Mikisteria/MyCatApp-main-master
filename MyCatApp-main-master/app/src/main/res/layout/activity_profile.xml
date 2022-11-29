@@ -7,7 +7,7 @@
     android:padding="20dp"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".ProfileActivity">
+    tools:context=".pantallas.ProfileActivity">
 
     <TextView
         style="@style/TextAppearance.MaterialComponents.Caption"

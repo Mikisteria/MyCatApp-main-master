@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".pantallas.MainActivity">
 
     <!---Google SignIn Button -->
 
@@ -28,10 +28,10 @@
             android:layout_marginBottom="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.558"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.011">
+            app:layout_constraintVertical_bias="0.0">
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -43,36 +43,53 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputFiltro"
+            android:layout_width="365dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp"
+            android:background="#B3EAE7D9"
+            android:hint="Filtrar por Raza"
+            android:padding="20px"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+
         <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
+            android:id="@+id/btnFavPan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
 
             android:layout_marginStart="256dp"
 
             android:layout_marginBottom="-46dp"
             android:background="#FCD6F9"
             android:radius="3dp"
-            android:text="Log out"
+            android:text="Favoritos"
             android:textColor="#424242"
             android:textSize="16sp" />
 
+        <Button
+            android:id="@+id/btnLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+
+            android:background="#FCD6F9"
+            android:radius="3dp"
+            android:text="LOG OUT"
+            android:textColor="#424242"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="108dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Kitties"
             android:textSize="34sp" />
 
-        <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="351dp"
-            android:layout_height="48dp"
-            android:queryHint="Buscar razas">
-
-        </SearchView>
     </LinearLayout>
 
 </RelativeLayout>
