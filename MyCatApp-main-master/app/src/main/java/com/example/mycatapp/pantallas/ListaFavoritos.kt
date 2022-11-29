@@ -122,52 +122,5 @@ class ListaFavoritos : AppCompatActivity(){
 }
 
 
-/*
 
-
-class ListaFavoritos(var items: MutableList<Cat>, context: Context) : RecyclerView.Adapter<CatViewHolder>() {
-    private val context = context
-
-    var onItemClick : ((Cat) -> Unit)? = null
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_favoritos, parent, false)
-        return CatViewHolder(view)
-
-    }
-
-    override fun onBindViewHolder(holder: CatViewHolder, position: Int) {
-        holder.name.text = items[position].name
-
-
-        Log.d(ContentValues.TAG, items[position].image!!.url)
-
-        Glide.with(context)
-            .load(items[position].image!!.url)
-            .placeholder(com.google.android.material.R.drawable.ic_clock_black_24dp)
-            .centerCrop()
-            .into(holder.image_url)
-
-        holder.itemView.setOnClickListener{
-            onItemClick?.invoke(items[position])
-        }
-
-    }
-
-
-
-
-    override fun getItemCount(): Int {
-        return items.size
-    }
-
-    fun Update(items_new: MutableList<Cat>){
-        items = items_new
-        this.notifyDataSetChanged()
-    }
-
-}
-
-
-
- */
 

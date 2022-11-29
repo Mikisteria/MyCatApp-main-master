@@ -3,17 +3,21 @@ package com.example.mycatapp.data
 import android.app.Activity
 import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.graphics.BlendMode
 import android.graphics.BlendModeColorFilter
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.res.ResourcesCompat
 import com.example.mycatapp.R
+import com.example.mycatapp.pantallas.Login
 
 class CustomProgressDialog(context: Context) {
 
@@ -75,6 +79,7 @@ class CustomProgressDialog(context: Context) {
             }
         }
     }
+
 
 
 }

@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         adapter = CatAdapter(kitties, this)
         rvKitties.adapter = adapter
 
+
         btnLogout = findViewById(R.id.btnLogOut)
         btnLogout.setOnClickListener {
             mGoogleSignInClient.signOut().addOnCompleteListener {
@@ -131,7 +132,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        progressDialog.start("Recuperando Datos...")
+
 
         start(this)
         var searchInput = findViewById<TextInputEditText>(R.id.inputFiltro)

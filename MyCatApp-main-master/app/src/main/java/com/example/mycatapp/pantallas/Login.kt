@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mycatapp.R
+import com.example.mycatapp.data.CustomProgressDialog
 import com.example.mycatapp.databinding.ActivityLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -21,7 +22,6 @@ class Login : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var firebaseAuth: FirebaseAuth
-
 
     //constants
     private companion object{
@@ -67,6 +67,7 @@ class Login : AppCompatActivity() {
         if(firebaseUser != null){
             //user is already logged in
             //Start profile activity
+
             startActivity(Intent(this@Login, MainActivity::class.java))
             finish()
         }
